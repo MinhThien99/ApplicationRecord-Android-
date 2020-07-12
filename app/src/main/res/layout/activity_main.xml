@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:fillViewport="true"
+      android:fitsSystemWindows="true"
+      >
+
+      <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white">
+          <ImageView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:adjustViewBounds="true"
+              android:scaleType="centerCrop"
+              android:src="@drawable/nenxam"
+              android:alpha="0.8"
+              android:contentDescription="@string/empty_description">
+          </ImageView>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              >
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  >
+                  <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/icon"
+                     android:layout_marginTop="10dp"
+                     android:layout_marginBottom="10dp"
+                     android:layout_marginLeft="50dp"
+                     android:contentDescription="@string/empty_description"
+                  >
+                  </ImageView>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/black"
+                      android:text="REGISTER"
+                      android:textSize="50sp"
+                      android:layout_marginLeft="5dp"
+                      android:textStyle="bold"
+                      android:layout_marginTop="25dp"
+                      >
+
+                  </TextView>
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_marginTop="20dp"
+                  android:padding="16dp"
+                  android:visibility="visible"
+                  app:layout_behavior ="@string/appbar_scrolling_view_behavior">
+
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColorHint="@color/white"
+                      app:passwordToggleEnabled="true"
+                      app:passwordToggleTint="@color/white"
+                      >
+                         <EditText
+                             android:id="@+id/edtemail"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_margin="10dp"
+                             android:textSize="25sp"
+                             android:inputType="textEmailAddress"
+                             android:singleLine="true"
+                             android:textColor="@color/white"
+                             android:textColorHint="@color/white"
+                             android:hint="email:"
+                            >
+                        </EditText>
+                  </com.google.android.material.textfield.TextInputLayout>
+
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColorHint="@color/white"
+                      app:passwordToggleDrawable="@drawable/icon_selector"
+                      app:passwordToggleEnabled="true"
+                      app:passwordToggleTint="@color/white"
+                      >
+                        <EditText
+                            android:id="@+id/edtpass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textSize="25sp"
+                            android:inputType="textPassword"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:hint="password:"
+                          >
+                        </EditText>
+                  </com.google.android.material.textfield.TextInputLayout>
+
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColorHint="@color/white"
+                      app:passwordToggleDrawable="@drawable/icon_selector"
+                      app:passwordToggleEnabled="true"
+                      app:passwordToggleTint="@color/white"
+                      >
+
+                      <EditText
+                          android:id="@+id/edtagainpass"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_margin="10dp"
+                          android:textSize="25sp"
+                          android:inputType="textPassword"
+                          android:singleLine="true"
+                          android:textColor="@color/white"
+                          android:textColorHint="@color/white"
+                          android:hint="again password:"
+                          >
+                      </EditText>
+                  </com.google.android.material.textfield.TextInputLayout>
+
+                  <Button
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textSize="30sp"
+                      android:text="Sign In"
+                      android:background="@color/colorPrimary"
+                      android:layout_margin="10dp"
+                      android:padding="10dp"
+                      android:id="@+id/btnsignin"
+                      >
+                  </Button>
+              </LinearLayout>
+          </LinearLayout>
+      </FrameLayout>
+  </ScrollView>
+</LinearLayout>
